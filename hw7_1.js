@@ -27,9 +27,9 @@ console.log('Version 1: Test sms Code and do Action (via if - else)\n')
 
 if (smsCode === smsCodeExpected)
     {console.log(smsMessageBoxNumber)
-    postomat[3] = postomatDefaultValue
     userAccountBalance1 -=100
     console.log(`Вы получили посылку из ячейки 4 и ваш счет составляет: ${userAccountBalance1}р.`)
+    postomat[3] = postomatDefaultValue
     }
 else
     console.log(smsMessageError);
@@ -41,9 +41,9 @@ console.log('Version 2: Test sms Code and do Action (via switch)\n')
 switch (smsCode === smsCodeExpected) {     
     case true:
         console.log(smsMessageBoxNumber)
-        postomat[3] = postomatDefaultValue
         userAccountBalance2 -=100
         console.log(`Вы получили посылку из ячейки 4 и ваш счет составляет: ${userAccountBalance2}р.`)
+        postomat[3] = postomatDefaultValue
         break;
     case false:
         console.log(smsMessageError);
