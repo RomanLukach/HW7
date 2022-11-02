@@ -10,7 +10,7 @@
 // --------------------
 
 // Опиcание кнопки отправки сообщений в чат с помощью конструктора класса
-class onClick {
+class button {
     constructor(buttonName, buttonHigh, buttonWidth, buttonType, buttonColor) {
         this.buttonName = buttonName;
         this.buttonHigh = buttonHigh;
@@ -21,10 +21,10 @@ class onClick {
 }
 
 // создать экземпляр класса button - передать аргументы в наш конструктор класса. 
-let buttonSend =  new onClick('onClick', 50, 100, 'button', 'green')
+let buttonSend =  new button('onClick', 50, 100, 'button', 'green')
 
 // Заданные свойства кнопки (Technical requirements)
-let buttonSendTechRequest = new onClick ('onClick', 50, 100, 'button', 'green')
+let buttonSendTechRequest = new button ('onClick', 50, 100, 'button', 'green')
 
 // создайте метод кнопки (onClick, выводящий в консоль информацию о нашей кнопке в формате 
 // console.log(this.props) выводим все пропертиес
@@ -39,13 +39,13 @@ function testButton()
     {
         if (buttonSend.buttonName != buttonSendTechRequest.buttonName)
             console.log('Button name did not corresponds to technica requirements.')
-        else if (buttonSend.buttonHigh != buttonSendTechRequest.buttonHigh)
+        else if (buttonSend.buttonHigh !== buttonSendTechRequest.buttonHigh)
             console.log('Button width did not corresponds to technical requirements')
-        else if (buttonSend.buttonWidth != buttonSendTechRequest.buttonWidth)
+        else if (buttonSend.buttonWidth !== buttonSendTechRequest.buttonWidth)
             console.log('Button width did not corresponds to technical requirements')
-        else if (buttonSend.buttonType != buttonSendTechRequest.buttonType)
+        else if (buttonSend.buttonType !== buttonSendTechRequest.buttonType)
             console.log('Button type did not corresponds to technical requirements')
-        else if (buttonSend.buttonColor != buttonSendTechRequest.buttonColor)
+        else if (buttonSend.buttonColor !== buttonSendTechRequest.buttonColor)
             console.log('Button color did not corresponds to technical requirements')
         else
             console.log('Button design comply to technical requirements')
