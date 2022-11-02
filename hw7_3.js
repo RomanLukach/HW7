@@ -18,23 +18,21 @@ class button {
         this.buttonType = buttonType;
         this.buttonColor = buttonColor;
     }
+// создайте метод кнопки (onClick, выводящий в консоль информацию о нашей кнопке в формате 
+// console.log(this.props) выводим все пропертиес    
+    onClick() {
+        console.log(`Button name: ${this.buttonName}`)
+        console.log(`Button high: ${this.buttonHigh}`)
+        console.log(`Button width: ${this.buttonWidth}`)
+        console.log(`Button type: ${this.buttonType}`)
+        console.log(`Button color: ${this.buttonColor}`)
+    }
 }
 
-// создать экземпляр класса button - передать аргументы в наш конструктор класса. 
-let buttonSend =  new button('onClick', 50, 100, 'button', 'green')
-
 // Заданные свойства кнопки (Technical requirements)
-let buttonSendTechRequest = new button ('onClick', 50, 100, 'button', 'green')
+let buttonSendTechRequest = new button ('Send', 50, 100, 'button', 'green')
 
-// создайте метод кнопки (onClick, выводящий в консоль информацию о нашей кнопке в формате 
-// console.log(this.props) выводим все пропертиес
-console.log(`Button name: ${buttonSend.buttonName}`)
-console.log(`Button high: ${buttonSend.buttonHigh}`)
-console.log(`Button width: ${buttonSend.buttonWidth}`)
-console.log(`Button type: ${buttonSend.buttonType}`)
-console.log(`Button color: ${buttonSend.buttonColor}`)
-
-// проверьте в отдельной функции testButton(), что свойства этого экземпляра класса соответствуют заданным.
+// функции testButton()
 function testButton() 
     {
         if (buttonSend.buttonName != buttonSendTechRequest.buttonName)
@@ -51,4 +49,9 @@ function testButton()
             console.log('Button design comply to technical requirements')
     }
 
-    testButton()
+// создать экземпляр класса button - передать аргументы в наш конструктор класса. 
+let buttonSend =  new button('Send', 50, 100, 'button', 'green');
+// выводим все пропертиес:
+buttonSend.onClick();
+// Test button:
+testButton()
