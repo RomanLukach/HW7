@@ -35,7 +35,7 @@ let buttonSendTechRequest = new button ('Send', 50, 100, 'button', 'green')
 // функции testButton()
 function testButton() 
     {
-        if (buttonSend.buttonName != buttonSendTechRequest.buttonName)
+        if (buttonSend.buttonName !== buttonSendTechRequest.buttonName)
             console.log('Button name did not corresponds to technica requirements.')
         else if (buttonSend.buttonHigh !== buttonSendTechRequest.buttonHigh)
             console.log('Button width did not corresponds to technical requirements')
